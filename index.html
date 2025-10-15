@@ -33,7 +33,7 @@
                         <div class="row">
 
 
-                            <form id="calc-ticket" class="col-9" action="">
+                            <form class="col-9" action="">
 
                                 <div class="row">
 
@@ -51,10 +51,10 @@
                                     </div>
                                     <!-- /età passeggero -->
 
-                                    <div class="col-2 d-flex align-items-end">
+                                    <!-- <div class="col-2 d-flex align-items-end">
                                         <button class="btn btn-outline-success">Invia</button>
                                     </div>
-                                    <!-- /botton -->
+                                    /botton -->
 
 
                                 </div>
@@ -92,21 +92,19 @@
                         <div class="row">
 
 
-                            <form action="">
+                            <form id="calc-ticket" action="">
 
                                 <div class="row justify-content-between">
 
                                     <div class="col-5">
                                         <h5 class="card-title">Nome</h5>
-                                        <input class="form-control" type="text" id="name-field"
-                                            placeholder="Km da percorrere">
+                                        <input class="form-control" type="text" id="name-field" placeholder="-">
                                     </div>
                                     <!-- /chilometri -->
 
                                     <div class="col-5">
                                         <h5 class="card-title">Cognome</h5>
-                                        <input class="form-control" type="text" id="surname-field"
-                                            placeholder="Età del passeggero">
+                                        <input class="form-control" type="text" id="surname-field" placeholder="-">
                                     </div>
                                     <!-- /età passeggero -->
 
@@ -122,7 +120,7 @@
                             </form>
                             <!-- /form -->
 
-                            
+
 
                         </div>
                         <!-- /row - card-body -->
@@ -144,11 +142,11 @@
                         <div class="row mb-3">
                             <div class="col-3">
                                 <h6 class="card-title text-secondary">Nome</h6>
-                                <p class="card-text">-</p>
+                                <p id="name-stamp" class="card-text">-</p>
                             </div>
                             <div class="col-3 bg-light">
                                 <h6 class="card-title text-secondary">Cognome</h6>
-                                <p class="card-text">-</p>
+                                <p id="surname-stamp" class="card-text">-</p>
                             </div>
                             <div class="col-3">
                                 <h6 class="card-title text-secondary">Età</h6>
@@ -156,7 +154,7 @@
                             </div>
                             <div class="col-3 bg-light">
                                 <h6 class="card-title text-secondary">Data</h6>
-                                <p class="card-text">-</p>
+                                <p id="date-stamp" class="card-text">-</p>
                             </div>
                         </div>
 

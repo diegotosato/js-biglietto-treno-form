@@ -39,43 +39,31 @@ const kiloField = document.getElementById('kilo-field')
 //costante per isolare l'input dell'età del passeggero
 const ageField = document.getElementById('age-field')
 
-
-
-
 //costante per isolare il tag h1 per stampare in pagina il prezzo
 const ticketPriceField = document.getElementById('ticket-price-field')
 
+//costante per isolare l'input del nome del passeggero
+const nameField = document.getElementById('name-field')
+
+//costante per isolare l'input del cognome del passeggero
+const surnameField = document.getElementById('surname-field')
+
+//recupero della data (YYYY, MM, DD)
+const date = new Date()
+const year = date.getFullYear()
+const month = date.getMonth()
+const day = date.getDate()
+const now = `${year}-${month + 1}-${day}`
+console.log(now);
 
 
 
-
-
-
-
-
+//costanti per isolare le varie sezioni della "stampa" del biglietto
+const nameStamp = document.getElementById('name-stamp')
+const surnameStamp = document.getElementById('surname-stamp')
 const ageStamp = document.getElementById('age-stamp')
+const dateStamp = document.getElementById('date-stamp')
 const priceStamp = document.getElementById('price-stamp')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //event listener per resettare il comportamento di default
@@ -104,16 +92,25 @@ form.addEventListener('submit', (event) => {
     }
 
 
-    console.log(ticketPrice);
-
 
     //modifica del contenuto HTML del tag h1
     //arrotondamento delle cifre decimali a 2 cifre
-    ticketPriceField.textContent = `${ticketPrice.toFixed(2)}€`
+    ticketPriceField.innerHTML = `${ticketPrice.toFixed(2)}€`
 
+    //stampa del nome
+    nameStamp.innerHTML = nameField.value
 
-    ageStamp.textContent = ageField.value
-    priceStamp.textContent = `${ticketPrice.toFixed(2)}€`
+    //stampa del cognome
+    surnameStamp.innerHTML = surnameField.value
+
+    //stampa dell'età
+    ageStamp.innerHTML = ageField.value
+
+    //stampa della data corrente
+    dateStamp.innerHTML = now
+
+    //stampa del prezzo
+    priceStamp.innerHTML = `${ticketPrice.toFixed(2)}€`
 
 })
 
