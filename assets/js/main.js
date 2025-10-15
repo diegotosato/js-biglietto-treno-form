@@ -75,8 +75,8 @@ form.addEventListener('submit', (event) => {
         ticketPrice = discountOver
     }
 
-    console.log(ticketPrice);
     
+    console.log(ticketPrice);
 
 })
 
