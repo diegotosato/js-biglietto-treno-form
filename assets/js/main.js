@@ -29,10 +29,26 @@
 /*---------------------------------------------------------------*/
 
 //costante per isolare l'input dei chilometri
-const kiloField = document.getElementById('kilo-field')
+let kiloField = document.getElementById('kilo-field')
 
 //costante per isolare l'input dell'età del passeggero
 const ageField = document.getElementById('age-field')
 
-console.log(kiloField.value, ageField.value);
+
+
+//costante per isolare il form
+const form = document.querySelector('form')
+
+//event listener per resettare il comportamento di default
+//del bottone nel form
+form.addEventListener('submit', (event) => {
+
+    //reset default submit
+    event.preventDefault()
+
+    //log per controllare la corretta raccolta dei valori inseriti
+    kiloField = kiloField.value
+    console.log(kiloField);
+    
+})
 
