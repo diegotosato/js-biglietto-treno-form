@@ -31,7 +31,7 @@
 
 
 //costante per isolare il form
-const form = document.querySelector('form')
+const form = document.getElementById('calc-ticket')
 
 //costante per isolare l'input dei chilometri
 const kiloField = document.getElementById('kilo-field')
@@ -44,6 +44,33 @@ const ageField = document.getElementById('age-field')
 
 //costante per isolare il tag h1 per stampare in pagina il prezzo
 const ticketPriceField = document.getElementById('ticket-price-field')
+
+
+
+
+
+
+
+
+
+const ageStamp = document.getElementById('age-stamp')
+const priceStamp = document.getElementById('price-stamp')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -83,6 +110,10 @@ form.addEventListener('submit', (event) => {
     //modifica del contenuto HTML del tag h1
     //arrotondamento delle cifre decimali a 2 cifre
     ticketPriceField.textContent = `${ticketPrice.toFixed(2)}€`
+
+
+    ageStamp.textContent = ageField.value
+    priceStamp.textContent = `${ticketPrice.toFixed(2)}€`
 
 })
 
