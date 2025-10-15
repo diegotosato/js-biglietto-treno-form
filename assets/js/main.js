@@ -19,3 +19,11 @@ const discountUnder = priceKilo * 0.8
 const discountOver = priceKilo * 0.6
 
 
+
+if (age < 18) {
+    ticketPrice = discountUnder
+} else if (age > 65) {
+    ticketPrice = discountOver
+}
+
+console.log(priceKilo);
