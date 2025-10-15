@@ -42,6 +42,8 @@ const ageField = document.getElementById('age-field')
 
 
 
+//costante per isolare il tag h1 per stampare in pagina il prezzo
+const ticketPriceField = document.getElementById('ticket-price-field')
 
 
 
@@ -52,31 +54,35 @@ const ageField = document.getElementById('age-field')
 //event listener per resettare il comportamento di default
 //del bottone nel form
 form.addEventListener('submit', (event) => {
-    
+
     //reset default submit
     event.preventDefault()
 
 
-    
+
     //variabile per calcolo prezzo del biglietto intero
     let ticketPrice = kiloField.value * 0.21
-    
-    //variabile per calcolo sconto minorenni (<18)
-    const discountUnder = ticketPrice * 0.8
-    
-    //variabile per calcolo sconto over 65 (>65)
-    const discountOver = ticketPrice * 0.6
 
 
     //condizioni per applicare lo sconto
     if (ageField.value < 18) {
-        ticketPrice = Number(discountUnder.toFixed(2))
+        // //variabile per calcolo sconto minorenni (<18)
+        const discountUnder = Number((ticketPrice * 0.8).toFixed(2))
+        ticketPrice = discountUnder
+
     } else if (ageField.value > 65) {
+        // //variabile per calcolo sconto over 65 (>65)
+        const discountOver = ticketPrice * 0.6
         ticketPrice = discountOver
     }
 
-    
+
     console.log(ticketPrice);
+
+
+    //modifica del contenuto HTML del tag h1
+    //arrotondamento delle cifre decimali a 2 cifre
+    ticketPriceField.textContent = `${ticketPrice.toFixed(2)}€`
 
 })
 
